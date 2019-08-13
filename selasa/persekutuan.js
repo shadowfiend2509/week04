@@ -22,7 +22,7 @@ function fpb(angka1, angka2) {
     }
     // console.log(newarr)
     // console.log(hasil1)
-    return hasil1
+    return newarr.reverse()[0]
   }
   
   // TEST CASES
