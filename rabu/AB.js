@@ -18,9 +18,6 @@ function checkAB(num) {
     }else{
         return false
     }
-    console.log(angkab);
-    return angkaa
-    return jarak
   }
   
   // TEST CASES
