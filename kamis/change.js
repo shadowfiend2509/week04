@@ -11,8 +11,8 @@ John Doe: { firstName: 'John', lastName: 'Doe', gender: 'male', age: 18 }
 
 
 function changeMe(arr) {
+    var obj = {}
     for(var i=0;i<arr.length;i++){
-        var obj = {}
         obj['firstName'] = arr[i][0],
         obj['lastName']= arr[i][1],
         obj['gender'] = arr[i][2]
@@ -21,15 +21,12 @@ function changeMe(arr) {
         }else{
             obj['age'] = 2019 - arr[i][3]
         }
+        console.log(obj)
     }
-    
-    return obj
-    
-
   }
   
   // TEST CASES
-  console.log(changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']])); // 1. Christ Evans:
+ (changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']])); // 1. Christ Evans:
   // { firstName: 'Christ',
   //   lastName: 'Evans',
   //   gender: 'Male',

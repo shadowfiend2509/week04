@@ -24,16 +24,38 @@ maka output:
 */
 
 function shoppingTime(memberId, money) {
-    var obj = {}
-    obj.member = memberId,
-    obj,uang = money
-    obj.new = {}
-    new.sepatu = 1500000,
-    new.BajuZoro = 500000,
-    new.HN = 250000,
-    new.sweaterUniklooh = 175000,
-    new.casingHandphone = 50000
+    var barang = [ 
+      ['Sepatu Stacattu','1500000'],
+      ['Baju Zoro','500000'],
+      ['Baju H&N','250000'], 
+      ['Sweater Uniklooh','175000'],
+      ['Casing HandPhone','50000']
+    ]
+    var list = []
+    var changemoney = []
+    var totalbelanja = 0
+    for(var i=0;i<barang.length;i++){
+      if(memberId===''||memberId===undefined){
+        return 'Mohon maaf toko X hanya berlaku untuk member!'
+      }else if(money<50000){
+        return 'Maaf uang anda tidak cukup!'
+      }else if(money>=barang[i][1]){
+        list.push(barang[i][0])
+        totalbelanja+=Number(barang[i][1])
+        changemoney=money-totalbelanja
+        // changemoney=money-barang[i][1]
+        // console.log(totalbelanja)
+      }
+    }
+
+    var obj = {
+      memberId: memberId,
+      money: money,
+      listPurchased : list,
+      changeMoney: changemoney, 
+    }
     return obj
+    
   }
   
   // TEST CASES
@@ -48,11 +70,11 @@ function shoppingTime(memberId, money) {
     //    'Casing Handphone' ],
     // changeMoney: 0 }
   console.log(shoppingTime('82Ku8Ma742', 170000));
-  //{ memberId: '82Ku8Ma742',
-  // money: 170000,
-  // listPurchased:
-  //  [ 'Casing Handphone' ],
-  // changeMoney: 120000 }
+  // //{ memberId: '82Ku8Ma742',
+  // // money: 170000,
+  // // listPurchased:
+  // //  [ 'Casing Handphone' ],
+  // // changeMoney: 120000 }
   console.log(shoppingTime('', 2475000)); //Mohon maaf, toko X hanya berlaku untuk member saja
   console.log(shoppingTime('234JdhweRxa53', 15000)); //Mohon maaf, uang tidak cukup
   console.log(shoppingTime()); ////Mohon maaf, toko X hanya berlaku untuk member saja
