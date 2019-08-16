@@ -11,8 +11,10 @@ John Doe: { firstName: 'John', lastName: 'Doe', gender: 'male', age: 18 }
 
 
 function changeMe(arr) {
-    var obj = {}
     for(var i=0;i<arr.length;i++){
+        console.log(i+1+'.'+arr[i][0]+' '+arr[i][1]+':')
+        var obj = {}
+        // obj[arr[i][0]+arr[i][1]]=0,
         obj['firstName'] = arr[i][0],
         obj['lastName']= arr[i][1],
         obj['gender'] = arr[i][2]
