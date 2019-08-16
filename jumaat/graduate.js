@@ -8,43 +8,27 @@
 function graduates (students) {
     var hasil = {}
 
-    for(var i=0; i<students.length; i++) {
+    for(var i=0;i<students.length;i++){
         if(hasil[students[i].class]===undefined){
-            hasil[students[i].class] = []
+            hasil[students[i].class]=[]
             if(students[i].score>=75){
-                let passed = {
-                    name : students[i].name,
-                    score : students[i].score
+                let objek ={
+                    name: students[i].name,
+                    score: students[i].score
                 }
-                hasil[students[i].class].push(passed)
+                hasil[students[i].class].push(objek)
             }
-
-
-            // if(hasil[students[i].class][0]===undefined){
-            //     hasil[students[i].class][0]={}
-            //     if(hasil[students[i].class][0]['score']===undefined){
-            //         hasil[students[i].class][0]['name']=students[i].name,
-            //         hasil[students[i].class][0]['score']=students[i].score
-            //     }else{
-            //         if(hasil[students[i].class][0]['score']<students[i].score){
-            //             hasil[students[i].class][0]['score'] = students[i].score
-            //         }
-            //     }
-            //     hasil[students[i].class].push(hasil[students[i].class][0])
-            // }
         }else{
             if(students[i].score>=75){
-                let passed1 = {
-                    name : students[i].name,
-                    score : students[i].score
+                let objek2 ={
+                    name:students[i].name,
+                    score:students[i].score
                 }
-                hasil[students[i].class].push(passed1)
+                hasil[students[i].class].push(objek2)
             }
         }
     }
-
     return hasil
-
   }
   
   console.log(graduates([

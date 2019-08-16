@@ -13,18 +13,17 @@
 
 
 function highestScore (students) {
-  var hasil ={}
-
-
-  for(var i=0; i<students.length; i++){
-    if(hasil[students[i].class] === undefined){
+  var hasil = {}
+  
+  for(var i=0;i<students.length;i++){
+    if(hasil[students[i].class]===undefined){
       hasil[students[i].class] = {}
       if(hasil[students[i].class]['score']===undefined){
-        hasil[students[i].class]['name'] = students[i].name,
-        hasil[students[i].class]['score']= students[i].score
+        hasil[students[i].class]['name']=students[i].name,
+        hasil[students[i].class]['score']=students[i].score
       }else{
         if(hasil[students[i].class]['score']<students[i].score){
-          hasil[students[i].class]['score'] = students[i].score
+          hasil[students[i].class]['score']=students[i].score
         }
       }
     }
