@@ -1,19 +1,17 @@
 function ubahHuruf(kata) {
     var alphabet = ('abcdefghijklmnopqrstuvwxyz')
-
-
     var hasil = ''
-
     for(var i=0;i<kata.length;i++){
         for(var j=0;j<alphabet.length;j++){
             if(kata[i]===alphabet[j]){
                 hasil+=alphabet[j+1]
             }
+            else if(kata[i]==='z'){         //z menjadi a
+                hasil+='a'
+                break
+            }
         }
     }
-
-
-
     return hasil
   }
   
@@ -22,5 +20,5 @@ function ubahHuruf(kata) {
   console.log(ubahHuruf('developer')); // efwfmpqfs
   console.log(ubahHuruf('javascript')); // kbwbtdsjqu
   console.log(ubahHuruf('keren')); // lfsfo
-  console.log(ubahHuruf('semangat')); // tfnbohbu
+  console.log(ubahHuruf('semangatz')); // tfnbohbu
 

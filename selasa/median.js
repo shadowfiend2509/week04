@@ -1,20 +1,13 @@
 function cariMedian(arr) {
     var newarr = []
     newarr.push(Math.floor(arr.length/2))
-
     var hasil = []
-
     if(arr.length%2){
         hasil.push(arr[newarr])
     }else{
         hasil.push((arr[newarr-1]+arr[newarr])/2)
     }
-
-
-
-    return hasil
-        
-    
+    return hasil.toString() //output
 }
 
   // TEST CASES

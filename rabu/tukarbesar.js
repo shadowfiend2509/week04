@@ -1,23 +1,19 @@
 function tukarBesarKecil(kalimat) {
     var tukar = ''
-
     for(var i=0;i<kalimat.length;i++){
         if(isNaN(kalimat[i])){
-        if(kalimat[i]===kalimat[i].toUpperCase()){
+            if(kalimat[i]===kalimat[i].toUpperCase()){
             tukar += kalimat[i].toLowerCase()
         }else{
             tukar += kalimat[i].toUpperCase()
+            }
+        }else{
+        tukar += kalimat[i]
         }
     }
-    else{
-        tukar += kalimat[i]
-    }
-}
-
     return tukar
   }
 
-  
   // TEST CASES
   console.log(tukarBesarKecil('Hello World')); // "hELLO wORLD"
   console.log(tukarBesarKecil('I aM aLAY')); // "i Am Alay"

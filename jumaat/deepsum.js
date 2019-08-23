@@ -1,6 +1,5 @@
 function deepSum (arr) {
     var hasil=0
-    
         for(var i=0; i<arr.length; i++){
             for(var j=0; j<arr[i].length; j++){
                 for(var k=0; k<arr[i][j].length; k++){
@@ -8,7 +7,7 @@ function deepSum (arr) {
                 }
             }
         }
-    if(hasil===0){
+    if(arr.length===0){   //perbaikan 
         return 'No Number'
     }
     return hasil
@@ -40,5 +39,7 @@ function deepSum (arr) {
       [2]
     ]
   ])); // 156
+
+  console.log(deepSum([[[0,0],[0,0]]]))
   
   console.log(deepSum([])); // No number
